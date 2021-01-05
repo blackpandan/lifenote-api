@@ -20,6 +20,12 @@ from .models import Todo, Project
 
 # views
 
+# this is for the home view
+@api_view(['GET'])
+def document(request):
+    return render(request, 'core/index.html')
+
+
 #this is for the todo request handling configuration
 @api_view(['GET', 'POST'])
 @authentication_classes([TokenAuthentication])
